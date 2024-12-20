@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+header {
+    @apply bg-gray-800;
+
+    nav {
+        @apply flex items-center h-12;
+
+        ul {
+            @apply flex gap-4;
+
+            li {
+                @apply flex items-center;
+
+                a {
+                    @apply text-white hover:text-gray-400;
+                }
+            }
+        }
+    }
+}header nav ul li a.active {
+    @apply text-red-500 font-bold;
+}
+
+footer {
+    @apply bg-gray-800 text-white h-32;
+
+    p {
+        @apply py-4 text-sm;
+    }
+
+    a {
+        @apply text-white hover:text-gray-400;
+    }
+}
