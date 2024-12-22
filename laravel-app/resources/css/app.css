@@ -20,6 +20,10 @@ header {
             }
         }
     }
+
+    header h1 {
+        @apply text-white text-2xl font-bold;
+    }
 }header nav ul li a.active {
     @apply text-red-500 font-bold;
 }
@@ -33,5 +37,11 @@ footer {
 
     a {
         @apply text-white hover:text-gray-400;
+    }
+}
+
+content { 
+    h1 {
+        @apply text-3xl font-bold;
     }
 }

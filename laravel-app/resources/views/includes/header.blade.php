@@ -26,6 +26,16 @@
                         href="{{ url('contact') }}">Contact
                     </a>
                 </li>
+                <li>
+                    <a  class="{{ request()->is('category') ? 'active' : '' }}" 
+                        href="{{ url('category') }}">Category
+                    </a>
+                </li>
+                <li>
+                    <a  class="{{ request()->is('food') ? 'active' : '' }}" 
+                        href="{{ url('food') }}">Food
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
