@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\FoodController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -22,3 +24,7 @@ require __DIR__.'/auth.php';
 
 Route::get('admin/dashboard', [HomeController::class, 'index'])->
     middleware(['auth','admin']);
+
+Route::resource('/category', CategoryController::class)->middleware(['auth','admin']);
+
+Route::resource('/food', FoodController::class)->middleware(['auth','admin']);
