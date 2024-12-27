@@ -29,6 +29,7 @@ class TodoController extends Controller
         $validator = Validator::make($input,[
             'title' => 'required',
             'description' => 'required',
+            'is_complete' => 'required|boolean|integer',
         ]);
         if ($validator->fails()) {
             $arr = [
@@ -71,6 +72,7 @@ class TodoController extends Controller
         $validator = Validator::make($input,[
             'title' => 'required',
             'description' => 'required',
+            'is_complete' => 'required|boolean|integer',
         ]);
         if ($validator->fails()) {
             $arr = [
@@ -82,6 +84,7 @@ class TodoController extends Controller
 
         $todo->title = $input['title'];
         $todo->description = $input['description'];
+        $todo->is_complete = $input['is_complete'];
         $todo->save();
 
         $arr = [

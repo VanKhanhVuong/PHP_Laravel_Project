@@ -18,6 +18,7 @@ class Todo extends JsonResource
             'id' => $this->id,
             'title' => $this->title,
             'description' => $this->description,
+            'is_complete' => (bool) $this->is_complete,
             'created_at' => $this->created_at->format('d/m/Y'),
             'updated_at' => $this->updated_at->format('d/m/Y'),
         ];
